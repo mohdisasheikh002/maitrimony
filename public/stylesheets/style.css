@@ -92,4 +92,15 @@ body {
     height: 4.2vmax;
     width: 4.2vmax;
   }
+
+  .textOff::after {
+    content: "";
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+    height: 2px;
+    width: 10vmax;
+    background-color: #fff;
+  }
 }
