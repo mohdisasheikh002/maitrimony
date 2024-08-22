@@ -1,3 +1,9 @@
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 .menubtn {
   position: relative;
   height: 2.6vmax;

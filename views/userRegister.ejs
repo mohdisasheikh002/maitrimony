@@ -4,10 +4,10 @@
   class="holder formHolder w-full flex items-center justify-center relative bg-white pb-[4.5vmax] max-sm:px-[2.5vmax]"
 >
   <div
-    class="form p-[4vmax] pt-[3.5vmax] rounded-md mt-[10vmax] z-10 bg-[#cf2e2e] max-sm:w-full max-sm:p-[2.5vmax] max-sm:mt-[12.5vmax] max-sm:pt-[2vmax] max-sm:pb-[3vmax]"
+    class="form p-[4vmax] pt-[3.5vmax] rounded-md mt-[10vmax] z-10 bg-[#cf2e2e] max-sm:w-full max-sm:p-[2.5vmax] max-sm:mt-[12.5vmax] max-sm:pt-[2vmax] max-sm:pb-[3.5vmax]"
   >
     <h1
-      class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3vmax]"
+      class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3.5vmax]"
     >
       Registration Form
     </h1>
@@ -21,20 +21,20 @@
         type="text"
         name="name"
         placeholder="Full Name"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[2vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[2vmax]"
       />
       <input
         required
         type="text"
         name="username"
         placeholder="Username"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
       <div class="flex mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
           required
           name="day"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1vmax]"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Day</option>
           <% for (let i = 1; i <= 31; i++) { %>
@@ -43,7 +43,7 @@
         </select>
         <select
           name="month"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1vmax]"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Month</option>
           <% for (let i = 1; i <= 12; i++) { %>
@@ -52,7 +52,7 @@
         </select>
         <select
           name="year"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Year</option>
           <% for (let i = 2024; i >= 1924; i--) { %>
@@ -89,7 +89,7 @@
         <select
           required
           name="height"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Height (ft)</option>
           <option value="4">4 ft</option>
@@ -181,7 +181,7 @@
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
           name="numberOfChildren"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax]"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Number of Children</option>
           <option value="1">1</option>
@@ -222,7 +222,7 @@
         <select
           name="religion"
           id="ddlReligion"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
           required
           data-validation-required-message="Please select a religion."
         >
@@ -438,7 +438,7 @@
         <select
           name="state"
           required
-          class="state block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+          class="state block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
         >
           <option value="" disabled selected>Select State</option>
           <option value="AP">Andhra Pradesh</option>
@@ -476,7 +476,7 @@
         <select
           name="city"
           required
-          class="city block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+          class="city block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
         >
           <option value="" disabled selected>Select City</option>
         </select>
@@ -486,8 +486,8 @@
           required
           name="address"
           placeholder="Address"
-          class="block resize-none p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
-          rows="2"
+          class="block resize-none p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
+          rows="3"
         ></textarea>
       </div>
       <input
@@ -495,13 +495,13 @@
         type="text"
         name="mobileNumber"
         placeholder="Mobile Number"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
           required
           name="country"
-          class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+          class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
         >
           <option value="" disabled selected>Select Country</option>
           <option value="India">India</option>
@@ -512,26 +512,27 @@
         type="email"
         name="email"
         placeholder="Email"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
       <input
         required
         type="password"
         name="password"
         placeholder="Password"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
       <button
         type="submit"
-        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:px-[1.2vmax] max-sm:mt-[3vmax]"
+        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:p-[1.5vmax] max-sm:mt-[3vmax]"
       >
         Register
       </button>
     </form>
     <div
-      class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%]"
+      class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%] max-sm:text-[2vmax]"
     >
       Already have an account?
+      <br />
       <a
         class="[1.2vmax] text-white border-b-[1px] border-white pb-[3px] ml-[.2vmax]"
         href="/user/login"
