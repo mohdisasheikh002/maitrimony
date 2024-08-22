@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="holder formHolder h-screen w-full flex items-center justify-center relative bg-white"
+    >
+      <div class="loginPanel text-center bg-[#cf2e2e] p-[4vmax] rounded-md">
+        <h1 class="text-[2vmax] text-white tracking-tight">
+          Admin Registration
+        </h1>
+        <form action="/admin/register" method="post">
+          <input
+            type="text"
+            name="name"
+            placeholder="Fullname"
+            class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500"
+          />
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="passwordInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500"
+          />
+          <button
+            class="py-[.8vmax] w-[25vmax] border-2 rounded-md text-white mt-[2vmax] hover:bg-white hover:text-black transition-[.25s ease-linear]"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

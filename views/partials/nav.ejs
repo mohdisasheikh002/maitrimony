@@ -1,0 +1,89 @@
+<% if(user){ %>
+<div
+  class="navbox absolute top-0 left-0 h-[5vmax] w-full bg-[#cf2e2e] flex items-center justify-between px-[5vmax] text-[#fff] z-20 max-sm:px-[2.5vmax] max-sm:h-0 max-sm:py-[4vmax]"
+>
+  <h1 class="text-[1.5vmax]">Logo</h1>
+  <div
+    class="linkbox absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex gap-[2.5vmax] max-sm:hidden"
+  >
+    <a href="/user/profile" class="text-[1vmax]">Home</a>
+    <a href="/about" class="text-[1vmax]">About Us</a>
+    <a href="/contact" class="text-[1vmax]">Contact</a>
+    <a href="/socials" class="text-[1vmax]">Socials</a>
+    <a href="/memberships" class="text-[1vmax]">Memberships</a>
+  </div>
+  <a href="/user/logout" class="max-sm:hidden"
+    ><button
+      class="py-[.5vmax] px-[1.5vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#cf2e2e] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax] max-sm:hidden"
+    >
+      Logout
+    </button></a
+  >
+  <div class="menubtn icon hidden max-sm:flex">
+    <svg
+      class="ham hamRotate ham8"
+      viewBox="0 0 100 100"
+      onclick="this.classList.toggle('active')"
+    >
+      <path
+        class="line top"
+        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+      />
+      <path class="line middle" d="m 30,50 h 40" />
+      <path
+        class="line bottom"
+        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+      />
+    </svg>
+  </div>
+</div>
+<% }else{ %>
+<div
+  class="navbox absolute top-0 left-0 h-[5vmax] w-full bg-[#cf2e2e] flex items-center justify-between px-[5vmax] text-[#fff] z-10 max-sm:px-[2.5vmax] max-sm:h-0 max-sm:py-[4vmax]"
+>
+  <h1 class="text-[1.5vmax]">Logo</h1>
+  <div
+    class="linkbox absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex gap-[2.5vmax] max-sm:hidden"
+  >
+    <a href="/" class="text-[1vmax]">Home</a>
+    <a href="/about" class="text-[1vmax]">About Us</a>
+    <a href="/contact" class="text-[1vmax]">Contact</a>
+    <a href="/memberships" class="text-[1vmax]">Memberships</a>
+    <a href="/privacy-policy" class="text-[1vmax]">Privacy policy</a>
+    <a href="/faq" class="text-[1vmax]">FAQ</a>
+  </div>
+  <div class="buttonbox flex gap-2 max-sm:hidden">
+    <a href="/user/register"
+      ><button
+        class="py-[.5vmax] w-[7vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#cf2e2e] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
+      >
+        Register
+      </button></a
+    >
+    <a href="/user/login"
+      ><button
+        class="py-[.5vmax] w-[7vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#cf2e2e] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
+      >
+        Login
+      </button></a
+    >
+  </div>
+  <div class="menubtn icon hidden max-sm:flex">
+    <svg
+      class="ham hamRotate ham8"
+      viewBox="0 0 100 100"
+      onclick="this.classList.toggle('active')"
+    >
+      <path
+        class="line top"
+        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+      />
+      <path class="line middle" d="m 30,50 h 40" />
+      <path
+        class="line bottom"
+        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+      />
+    </svg>
+  </div>
+</div>
+<% } %>

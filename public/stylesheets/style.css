@@ -1,0 +1,89 @@
+.menubtn {
+  position: relative;
+  height: 2.6vmax;
+  width: 2.6vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5vmax;
+  padding: 0.01vmax;
+  padding-top: 0.04vmax;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.menubtn .ham {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0.5vmax;
+}
+
+.menubtn .hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.menubtn .line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.menubtn .ham8 .top {
+  stroke-dasharray: 40 160;
+}
+
+.menubtn .ham8 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.menubtn .ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.menubtn .ham8.active .top {
+  stroke-dashoffset: -64px;
+}
+
+.menubtn .ham8.active .middle {
+  /* stroke-dashoffset: -20px; */
+  transform: rotate(90deg);
+}
+
+.menubtn .ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+
+.textOff {
+  position: relative;
+}
+
+.textOff::after {
+  content: "";
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+  height: 2px;
+  width: 7vmax;
+  background-color: #fff;
+}
+
+@media (max-width: 30cm) {
+  .menubtn {
+    height: 4.2vmax;
+    width: 4.2vmax;
+  }
+}

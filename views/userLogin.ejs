@@ -1,0 +1,47 @@
+<%- include('./partials/header')%>
+<!--  -->
+<div
+  class="holder formHolder h-screen w-full flex flex-col items-center justify-center relative bg-white max-sm:p-[2.5vmax]"
+>
+  <div
+    class="text-center bg-[#cf2e2e] p-[4vmax] pt-[3.5vmax] rounded-md z-10 max-sm:p-[2.5vmax] max-sm:w-full max-sm:pt-[2vmax] max-sm:pb-[3vmax]"
+  >
+    <h1
+      class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3vmax]"
+    >
+      User Login
+    </h1>
+    <form action="/user/login" method="post">
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[2vmax]"
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        class="passwordInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+      />
+      <button
+        type="submit"
+        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:px-[1.2vmax] max-sm:mt-[3vmax]"
+      >
+        Login
+      </button>
+    </form>
+    <div
+      class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%]"
+    >
+      Don't have an account?
+      <a
+        class="[1.2vmax] text-white border-b-[1px] border-white pb-[3px] ml-[.2vmax]"
+        href="/user/register"
+        >Create new account</a
+      >
+    </div>
+  </div>
+</div>
+<!--  -->
+<%- include('./partials/footer')%>

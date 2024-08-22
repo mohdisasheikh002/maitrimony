@@ -1,0 +1,48 @@
+<div
+  class="menubox absolute top-[8vmax] right-0 w-[0%] border-t-2 border-white bg-[#cf2e2e] hidden max-sm:flex flex-col z-20"
+  style="height: calc(100vh - 8vmax); transition: 0.25s linear"
+>
+  <% if(user){ %>
+  <a
+    href="/profile"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Home</a
+  >
+  <% }else{ %>
+  <a
+    href="/home"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Home</a
+  >
+  <% } %>
+  <a
+    href="/about"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >About Us</a
+  >
+  <a
+    href="/contact"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Contact</a
+  >
+  <a
+    href="/memberships"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Memberships</a
+  >
+  <a
+    href="/privacy-policy"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Privacy policy</a
+  >
+  <a
+    href="/faq"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >FAQ</a
+  >
+  <a
+    href="/user/login"
+    class="text-[2vmax] text-white border-b-2 py-[1.5vmax] px-[2.5vmax]"
+    >Member login</a
+  >
+</div>

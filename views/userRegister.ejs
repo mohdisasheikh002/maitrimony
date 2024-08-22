@@ -1,0 +1,593 @@
+<%- include('./partials/header')%>
+<!--  -->
+<div
+  class="holder formHolder w-full flex items-center justify-center relative bg-white pb-[4.5vmax] max-sm:px-[2.5vmax]"
+>
+  <div
+    class="form p-[4vmax] pt-[3.5vmax] rounded-md mt-[10vmax] z-10 bg-[#cf2e2e] max-sm:w-full max-sm:p-[2.5vmax] max-sm:mt-[12.5vmax] max-sm:pt-[2vmax] max-sm:pb-[3vmax]"
+  >
+    <h1
+      class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3vmax]"
+    >
+      Registration Form
+    </h1>
+    <form
+      action="/user/register"
+      method="post"
+      class="max-sm:overflow-x-hidden"
+    >
+      <input
+        required
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[2vmax]"
+      />
+      <input
+        required
+        type="text"
+        name="username"
+        placeholder="Username"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+      />
+      <div class="flex mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          required
+          name="day"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1vmax]"
+        >
+          <option value="" disabled selected>Day</option>
+          <% for (let i = 1; i <= 31; i++) { %>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <select
+          name="month"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1vmax]"
+        >
+          <option value="" disabled selected>Month</option>
+          <% for (let i = 1; i <= 12; i++) { %>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <select
+          name="year"
+          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+        >
+          <option value="" disabled selected>Year</option>
+          <% for (let i = 2024; i >= 1924; i--) { %>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <label class="text-white">Gender:</label><br />
+        <div class="flex mt-1">
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="Male"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="male"
+            >Male</label
+          >
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="Female"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="female"
+            >Female</label
+          >
+        </div>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          required
+          name="height"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+        >
+          <option value="" disabled selected>Height (ft)</option>
+          <option value="4">4 ft</option>
+          <option value="4.1">4 ft 1 in</option>
+          <option value="4.2">4 ft 2 in</option>
+          <option value="4.3">4 ft 3 in</option>
+          <option value="4.4">4 ft 4 in</option>
+          <option value="4.5">4 ft 5 in</option>
+          <option value="4.6">4 ft 6 in</option>
+          <option value="4.7">4 ft 7 in</option>
+          <option value="4.8">4 ft 8 in</option>
+          <option value="4.9">4 ft 9 in</option>
+          <option value="4.10">4 ft 10 in</option>
+          <option value="4.11">4 ft 11 in</option>
+          <option value="5">5 ft</option>
+          <option value="5.1">5 ft 1 in</option>
+          <option value="5.2">5 ft 2 in</option>
+          <option value="5.3">5 ft 3 in</option>
+          <option value="5.4">5 ft 4 in</option>
+          <option value="5.5">5 ft 5 in</option>
+          <option value="5.6">5 ft 6 in</option>
+          <option value="5.7">5 ft 7 in</option>
+          <option value="5.8">5 ft 8 in</option>
+          <option value="5.9">5 ft 9 in</option>
+          <option value="5.10">5 ft 10 in</option>
+          <option value="5.11">5 ft 11 in</option>
+          <option value="6">6 ft</option>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax] max-sm:pr-[1.5vmax]">
+        <label class="text-white">Marital Status:</label><br />
+        <div class="flex mt-1 max-sm:block">
+          <input
+            type="radio"
+            id="neverMarried"
+            name="maritalStatus"
+            value="Never married"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label
+            class="mr-8 max-sm:mr-[1.7vmax] text-white"
+            for="neverMarried"
+            >Never Married</label
+          >
+          <input
+            type="radio"
+            id="awaitingDivorce"
+            name="maritalStatus"
+            value="Awaiting divorce"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label
+            class="mr-8 max-sm:mr-[1.7vmax] text-white"
+            for="awaitingDivorce"
+            >Awaiting Divorce</label
+          >
+          <input
+            type="radio"
+            id="divorced"
+            name="maritalStatus"
+            value="Divorced"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="divorced"
+            >Divorced</label
+          >
+          <input
+            type="radio"
+            id="widowed"
+            name="maritalStatus"
+            value="Widowed"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="widowed"
+            >Widowed</label
+          >
+          <input
+            type="radio"
+            id="separated"
+            name="maritalStatus"
+            value="Separated"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="separated"
+            >Separated</label
+          >
+        </div>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          name="numberOfChildren"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax]"
+        >
+          <option value="" disabled selected>Number of Children</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="4+">4 or more</option>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <label class="text-white">Children Living:</label><br />
+        <div class="flex mt-1">
+          <input
+            type="radio"
+            id="livingWithMe"
+            name="childrenLiving"
+            value="Living with me"
+            class="mr-2 max-sm:mr-[.5vmax]"
+          /><label
+            class="mr-8 max-sm:mr-[1.7vmax] text-white"
+            for="livingWithMe"
+            >Living with me</label
+          >
+          <input
+            type="radio"
+            id="notLivingWithMe"
+            name="childrenLiving"
+            value="Not living with me"
+            class="mr-2 max-sm:mr-[.5vmax]"
+          /><label
+            class="mr-8 max-sm:mr-[1.7vmax] text-white"
+            for="notLivingWithMe"
+            >Not living with me</label
+          >
+        </div>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          name="religion"
+          id="ddlReligion"
+          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1vmax]"
+          required
+          data-validation-required-message="Please select a religion."
+        >
+          <option value="" disabled selected>Religion</option>
+          <option value="5-0">Christianity</option>
+          <option value="7-0">Hindu</option>
+          <option value="8-0">Islam</option>
+          <option value="12-0">Sikh</option>
+          <option value="11-0">Nonreligious</option>
+          <optgroup label="Christianity Subcategories">
+            <option value="5-3">Christianity - Anglican</option>
+            <option value="5-4">Christianity - Baptist</option>
+            <option value="5-5">Christianity - Born Again</option>
+            <option value="5-6">Christianity - Catholic</option>
+            <option value="5-7">Christianity - Catholic Kananaya</option>
+            <option value="5-8">Christianity - Catholic Latin</option>
+            <option value="5-9">Christianity - Catholic Malankara</option>
+            <option value="5-10">Christianity - Catholic Roman</option>
+            <option value="5-11">Christianity - Catholic Syrian</option>
+            <option value="5-12">Christianity - CMS</option>
+            <option value="5-13">Christianity - CSI</option>
+            <option value="5-14">Christianity - Evangelical</option>
+            <option value="5-15">Christianity - Jacobite</option>
+            <option value="5-16">Christianity - Marthomite</option>
+            <option value="5-17">Christianity - Nadar</option>
+            <option value="5-18">Christianity - Orthodox</option>
+            <option value="5-19">Christianity - Pentacost</option>
+            <option value="5-20">Christianity - Protestant</option>
+            <option value="5-1">Christianity - Thai</option>
+            <option value="5-2">Christianity - Tibetan</option>
+          </optgroup>
+          <optgroup label="Hindu Subcategories">
+            <option value="7-172">Hindu - Ganiga</option>
+            <option value="7-22">Hindu - 96K Kokanastha</option>
+            <option value="7-23">Hindu - Adi Dravida</option>
+            <option value="7-24">Hindu - Agamudayaar</option>
+            <option value="7-25">Hindu - Agarwal</option>
+            <option value="7-26">Hindu - Arora</option>
+            <option value="7-27">Hindu - Arya Vysya</option>
+            <option value="7-28">Hindu - Balija Naidu</option>
+            <option value="7-164">Hindu - Bania</option>
+            <option value="7-168">Hindu - Banjara</option>
+            <option value="7-29">Hindu - Bengali</option>
+            <option value="7-30">Hindu - Bhandari</option>
+            <option value="7-31">Hindu - Billava</option>
+            <option value="7-32">Hindu - Brahmin</option>
+            <option value="7-33">Hindu - Brahmin Anavil</option>
+            <option value="7-34">Hindu - Brahmin Bengali</option>
+            <option value="7-35">Hindu - Brahmin Davadnya</option>
+            <option value="7-36">Hindu - Brahmin Deshastha</option>
+            <option value="7-37">Hindu - Brahmin Garhwali</option>
+            <option value="7-38">Hindu - Brahmin Gaur</option>
+            <option value="7-39">Hindu - Brahmin Gowd Saraswat</option>
+            <option value="7-40">Hindu - Brahmin Gujarati</option>
+            <option value="7-41">Hindu - Brahmin Havyaka</option>
+            <option value="7-42">Hindu - Brahmin Kanada Madhva</option>
+            <option value="7-43">Hindu - Brahmin Kanyakubja</option>
+            <option value="7-44">Hindu - Brahmin Kokanastha</option>
+            <option value="7-45">Hindu - Brahmin Kumoani</option>
+            <option value="7-46">Hindu - Brahmin Maharashtrian</option>
+            <option value="7-47">Hindu - Brahmin Maithil</option>
+            <option value="7-48">Hindu - Brahmin Nagar</option>
+            <option value="7-49">Hindu - Brahmin Pareek</option>
+            <option value="7-50">Hindu - Brahmin Punjabi</option>
+            <option value="7-51">Hindu - Brahmin Saryuparin</option>
+            <option value="7-52">Hindu - Brahmin Smartha</option>
+            <option value="7-53">Hindu - Brahmin Telugu</option>
+            <option value="7-54">Hindu - Bramhan Bhumihar</option>
+            <option value="7-55">Hindu - Bunt</option>
+            <option value="7-56">Hindu - Chettiar</option>
+            <option value="7-57">Hindu - Coorgi</option>
+            <option value="7-58">Hindu - Daraji</option>
+            <option value="7-59">Hindu - Devadiga</option>
+            <option value="7-60">Hindu - Devanga</option>
+            <option value="7-61">Hindu - Dheevara</option>
+            <option value="7-62">Hindu - Ezhava</option>
+            <option value="7-63">Hindu - Ezhuthassan</option>
+            <option value="7-64">Hindu - Gold Smith</option>
+            <option value="7-65">Hindu - Gowda</option>
+            <option value="7-66">Hindu - Gujarati</option>
+            <option value="7-67">Hindu - Gupta</option>
+            <option value="7-68">Hindu - Iyengar</option>
+            <option value="7-69">Hindu - Iyer</option>
+            <option value="7-70">Hindu - Jat</option>
+            <option value="7-71">Hindu - Jatav</option>
+            <option value="7-72">Hindu - Kamboj</option>
+            <option value="7-73">Hindu - Kamma</option>
+            <option value="7-74">Hindu - Kapu</option>
+            <option value="7-75">Hindu - Kashmiri Pandit</option>
+            <option value="7-76">Hindu - Kayastha</option>
+            <option value="7-77">Hindu - Kerala Malaylee Namboodiri</option>
+            <option value="7-78">Hindu - Khandelwal</option>
+            <option value="7-79">Hindu - Khatri</option>
+            <option value="7-80">Hindu - Kongu Vellala Gounder</option>
+            <option value="7-81">Hindu - Kshatriya</option>
+            <option value="7-82">Hindu - Kumaoni</option>
+            <option value="7-83">Hindu - Kumbara</option>
+            <option value="7-84">Hindu - Kurmi</option>
+            <option value="7-85">Hindu - Kuruhina Shetty</option>
+            <option value="7-86">Hindu - Kushwaha</option>
+            <option value="7-87">Hindu - Lingayat</option>
+            <option value="7-88">Hindu - Lohana</option>
+            <option value="7-89">Hindu - Maharashtrian</option>
+            <option value="7-90">Hindu - Maheshwari</option>
+            <option value="7-91">Hindu - Maratha</option>
+            <option value="7-92">Hindu - Maruthuvar</option>
+            <option value="7-93">Hindu - Marwari</option>
+            <option value="7-94">Hindu - Matang</option>
+            <option value="7-95">Hindu - Mathur</option>
+            <option value="7-96">Hindu - Mathurvaishya</option>
+            <option value="7-97">Hindu - Menon</option>
+            <option value="7-98">Hindu - Mudaliar</option>
+            <option value="7-99">Hindu - Mudaliar Arcot</option>
+            <option value="7-100">Hindu - Nadar</option>
+            <option value="7-101">Hindu - Naicker</option>
+            <option value="7-102">Hindu - Nayak</option>
+            <option value="7-103">Hindu - OBC</option>
+            <option value="7-104">Hindu - Patil</option>
+            <option value="7-105">Hindu - Patel</option>
+            <option value="7-106">Hindu - Rajput</option>
+            <option value="7-107">Hindu - Saliyar</option>
+            <option value="7-108">Hindu - SC</option>
+            <option value="7-109">Hindu - Shudra</option>
+            <option value="7-110">Hindu - Siva</option>
+            <option value="7-111">Hindu - Thiyya</option>
+            <option value="7-112">Hindu - Vaidya</option>
+            <option value="7-113">Hindu - Vankas</option>
+            <option value="7-114">Hindu - Vaniya</option>
+            <option value="7-115">Hindu - Vaishya</option>
+            <option value="7-116">Hindu - Vishwakarma</option>
+            <option value="7-117">Hindu - Yadav</option>
+          </optgroup>
+          <optgroup label="Islam Subcategories">
+            <option value="8-148">Islam - Ahmadiyya</option>
+            <option value="8-149">Islam - Hanafi</option>
+            <option value="8-150">Islam - Hanbali</option>
+            <option value="8-151">Islam - Ibadi</option>
+            <option value="8-152">Islam - Ismaili</option>
+            <option value="8-153">Islam - Ja'fari</option>
+            <option value="8-154">Islam - Maliki</option>
+            <option value="8-155">Islam - Salafi</option>
+            <option value="8-156">Islam - Shafi'i</option>
+            <option value="8-157">Islam - Sunni</option>
+            <option value="8-158">Islam - Sufi</option>
+          </optgroup>
+          <optgroup label="Sikh Subcategories">
+            <option value="12-152">Sikh - Amritdhari</option>
+            <option value="12-153">Sikh - Clean Shaven</option>
+            <option value="12-154">Sikh - Gursikh</option>
+            <option value="12-155">Sikh - Keshdhari</option>
+            <option value="12-156">Sikh - Nihang</option>
+            <option value="12-157">Sikh - Sikh - Patiala</option>
+            <option value="12-158">Sikh - Sikh - Ravidasia</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax] max-sm:pr-[1.5vmax]">
+        <label class="text-white">Employed In:</label><br />
+        <div class="flex mt-1 max-sm:block">
+          <input
+            type="radio"
+            id="government"
+            name="employedIn"
+            value="Government"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="government"
+            >Government</label
+          >
+          <input
+            type="radio"
+            id="private"
+            name="employedIn"
+            value="Private"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="private"
+            >Private</label
+          >
+          <input
+            type="radio"
+            id="business"
+            name="employedIn"
+            value="Business"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="business"
+            >Business</label
+          >
+          <input
+            type="radio"
+            id="defence"
+            name="employedIn"
+            value="Defence"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="defence"
+            >Defence</label
+          >
+          <input
+            type="radio"
+            id="notWorking"
+            name="employedIn"
+            value="Not working"
+            class="mr-2 max-sm:mr-[.5vmax]"
+            required
+          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="notWorking"
+            >Not working</label
+          >
+        </div>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          name="state"
+          required
+          class="state block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        >
+          <option value="" disabled selected>Select State</option>
+          <option value="AP">Andhra Pradesh</option>
+          <option value="AR">Arunachal Pradesh</option>
+          <option value="AS">Assam</option>
+          <option value="BR">Bihar</option>
+          <option value="CT">Chhattisgarh</option>
+          <option value="GO">Goa</option>
+          <option value="GJ">Gujarat</option>
+          <option value="HR">Haryana</option>
+          <option value="HP">Himachal Pradesh</option>
+          <option value="JK">Jammu and Kashmir</option>
+          <option value="JH">Jharkhand</option>
+          <option value="KA">Karnataka</option>
+          <option value="KL">Kerala</option>
+          <option value="MP">Madhya Pradesh</option>
+          <option value="MH">Maharashtra</option>
+          <option value="MN">Manipur</option>
+          <option value="ME">Meghalaya</option>
+          <option value="MZ">Mizoram</option>
+          <option value="NL">Nagaland</option>
+          <option value="OD">Odisha</option>
+          <option value="PB">Punjab</option>
+          <option value="RJ">Rajasthan</option>
+          <option value="SK">Sikkim</option>
+          <option value="TN">Tamil Nadu</option>
+          <option value="TS">Telangana</option>
+          <option value="TR">Tripura</option>
+          <option value="UP">Uttar Pradesh</option>
+          <option value="UK">Uttarakhand</option>
+          <option value="WB">West Bengal</option>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          name="city"
+          required
+          class="city block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        >
+          <option value="" disabled selected>Select City</option>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <textarea
+          required
+          name="address"
+          placeholder="Address"
+          class="block resize-none p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+          rows="2"
+        ></textarea>
+      </div>
+      <input
+        required
+        type="text"
+        name="mobileNumber"
+        placeholder="Mobile Number"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+      />
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          required
+          name="country"
+          class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+        >
+          <option value="" disabled selected>Select Country</option>
+          <option value="India">India</option>
+        </select>
+      </div>
+      <input
+        required
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+      />
+      <input
+        required
+        type="password"
+        name="password"
+        placeholder="Password"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:p-[1vmax] max-sm:px-[1.2vmax] max-sm:mt-[1.5vmax]"
+      />
+      <button
+        type="submit"
+        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:px-[1.2vmax] max-sm:mt-[3vmax]"
+      >
+        Register
+      </button>
+    </form>
+    <div
+      class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%]"
+    >
+      Already have an account?
+      <a
+        class="[1.2vmax] text-white border-b-[1px] border-white pb-[3px] ml-[.2vmax]"
+        href="/user/login"
+        >Login your account</a
+      >
+    </div>
+  </div>
+</div>
+<script>
+  const cities = {
+    AP: ["Visakhapatnam", "Vijayawada", "Guntur"],
+    AR: ["Itanagar", "Naharlagun"],
+    AS: ["Guwahati", "Dispur", "Jorhat"],
+    BR: ["Patna", "Gaya", "Bhagalpur"],
+    CT: ["Raipur", "Bhilai", "Korba"],
+    GO: ["Panaji", "Margao"],
+    GJ: ["Ahmedabad", "Vadodara", "Surat"],
+    HR: ["Chandigarh", "Faridabad", "Gurugram"],
+    HP: ["Shimla", "Dharamshala"],
+    JK: ["Srinagar", "Jammu"],
+    JH: ["Ranchi", "Jamshedpur"],
+    KA: ["Bengaluru", "Mysuru", "Hubli"],
+    KL: ["Thiruvananthapuram", "Kochi", "Kozhikode"],
+    MP: ["Bhopal", "Indore", "Gwalior"],
+    MH: ["Mumbai", "Pune", "Nagpur"],
+    MN: ["Imphal"],
+    ME: ["Shillong"],
+    MZ: ["Aizawl"],
+    NL: ["Kohima"],
+    OD: ["Bhubaneswar", "Cuttack"],
+    PB: ["Chandigarh", "Amritsar", "Ludhiana"],
+    RJ: ["Jaipur", "Udaipur", "Jodhpur"],
+    SK: ["Gangtok"],
+    TN: ["Chennai", "Coimbatore", "Madurai"],
+    TS: ["Hyderabad", "Warangal"],
+    TR: ["Agartala"],
+    UP: ["Lucknow", "Kanpur", "Agra"],
+    UK: ["Dehradun", "Haridwar"],
+    WB: ["Kolkata", "Siliguri", "Durgapur"],
+  };
+
+  document.querySelector(".state").addEventListener("change", function () {
+    const state = this.value;
+    const citySelect = document.querySelector(".city");
+    citySelect.innerHTML =
+      '<option value="" disabled selected>Select City</option>';
+
+    if (state && cities[state]) {
+      cities[state].forEach((city) => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+  });
+</script>
+<!--  -->
+<%- include('./partials/footer')%>
