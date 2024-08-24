@@ -4,7 +4,7 @@
   class="holder formHolder w-full flex items-center justify-center relative bg-white pb-[4.5vmax] max-sm:px-[2.5vmax]"
 >
   <div
-    class="form p-[4vmax] pt-[3.5vmax] rounded-md mt-[10vmax] z-10 bg-[#cf2e2e] max-sm:w-full max-sm:p-[2.5vmax] max-sm:mt-[12.5vmax] max-sm:pt-[2vmax] max-sm:pb-[3.5vmax]"
+    class="form w-[60%] p-[4vmax] pt-[3.5vmax] rounded-md mt-[10vmax] z-10 bg-[#cf2e2e] max-sm:w-full max-sm:p-[2.5vmax] max-sm:mt-[12.5vmax] max-sm:pt-[2vmax] max-sm:pb-[3.5vmax]"
   >
     <h1
       class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3.5vmax]"
@@ -34,7 +34,7 @@
         <select
           required
           name="day"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Day</option>
           <% for (let i = 1; i <= 31; i++) { %>
@@ -42,8 +42,9 @@
           <% } %>
         </select>
         <select
+          required
           name="month"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Month</option>
           <% for (let i = 1; i <= 12; i++) { %>
@@ -51,8 +52,9 @@
           <% } %>
         </select>
         <select
+          required
           name="year"
-          class="block p-[.8vmax] w-[32%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
           <option value="" disabled selected>Year</option>
           <% for (let i = 2024; i >= 1924; i--) { %>
@@ -60,38 +62,42 @@
           <% } %>
         </select>
       </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
-        <label class="text-white">Gender:</label><br />
-        <div class="flex mt-1">
-          <input
-            type="radio"
-            id="male"
-            name="gender"
-            value="Male"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="male"
-            >Male</label
-          >
-          <input
-            type="radio"
-            id="female"
-            name="gender"
-            value="Female"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="female"
-            >Female</label
-          >
+      <div class="mt-[1vmax] max-sm:mt-[2vmax]">
+        <label class="text-white max-sm:text-[2vmax]">Gender:</label><br />
+        <div class="flex gap-[1.5vmax] mt-1 max-sm:gap-[2.5vmax]">
+          <div class="radiobox flex gap-[.4vmax] max-sm:gap-[.6vmax]">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="Male"
+              class=""
+              required
+            /><label class="text-white max-sm:text-[2vmax]" for="male"
+              >Male</label
+            >
+          </div>
+          <div class="radiobox flex gap-[.4vmax] max-sm:gap-[.6vmax]">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              class=""
+              required
+            /><label class="text-white max-sm:text-[2vmax]" for="female"
+              >Female</label
+            >
+          </div>
         </div>
       </div>
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
           required
           name="height"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
-          <option value="" disabled selected>Height (ft)</option>
+          <option value="" disabled selected>Height</option>
           <option value="4">4 ft</option>
           <option value="4.1">4 ft 1 in</option>
           <option value="4.2">4 ft 2 in</option>
@@ -119,71 +125,26 @@
           <option value="6">6 ft</option>
         </select>
       </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax] max-sm:pr-[1.5vmax]">
-        <label class="text-white">Marital Status:</label><br />
-        <div class="flex mt-1 max-sm:block">
-          <input
-            type="radio"
-            id="neverMarried"
-            name="maritalStatus"
-            value="Never married"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label
-            class="mr-8 max-sm:mr-[1.7vmax] text-white"
-            for="neverMarried"
-            >Never Married</label
-          >
-          <input
-            type="radio"
-            id="awaitingDivorce"
-            name="maritalStatus"
-            value="Awaiting divorce"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label
-            class="mr-8 max-sm:mr-[1.7vmax] text-white"
-            for="awaitingDivorce"
-            >Awaiting Divorce</label
-          >
-          <input
-            type="radio"
-            id="divorced"
-            name="maritalStatus"
-            value="Divorced"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="divorced"
-            >Divorced</label
-          >
-          <input
-            type="radio"
-            id="widowed"
-            name="maritalStatus"
-            value="Widowed"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="widowed"
-            >Widowed</label
-          >
-          <input
-            type="radio"
-            id="separated"
-            name="maritalStatus"
-            value="Separated"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="separated"
-            >Separated</label
-          >
-        </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          required
+          name="maritalStatus"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+        >
+          <option value="" disabled selected>Marital status</option>
+          <option value="Never married">Never married</option>
+          <option value="Awaiting divorce">Awaiting divorce</option>
+          <option value="Divorced">Divorced</option>
+          <option value="Widowed">Widowed</option>
+          <option value="Separated">Separated</option>
+        </select>
       </div>
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
           name="numberOfChildren"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
-          <option value="" disabled selected>Number of Children</option>
+          <option value="" disabled selected>Number of children</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -191,38 +152,43 @@
           <option value="4+">4 or more</option>
         </select>
       </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
-        <label class="text-white">Children Living:</label><br />
-        <div class="flex mt-1">
-          <input
-            type="radio"
-            id="livingWithMe"
-            name="childrenLiving"
-            value="Living with me"
-            class="mr-2 max-sm:mr-[.5vmax]"
-          /><label
-            class="mr-8 max-sm:mr-[1.7vmax] text-white"
-            for="livingWithMe"
-            >Living with me</label
-          >
-          <input
-            type="radio"
-            id="notLivingWithMe"
-            name="childrenLiving"
-            value="Not living with me"
-            class="mr-2 max-sm:mr-[.5vmax]"
-          /><label
-            class="mr-8 max-sm:mr-[1.7vmax] text-white"
-            for="notLivingWithMe"
-            >Not living with me</label
-          >
+      <div class="mt-[1vmax] max-sm:mt-[2vmax]">
+        <label class="text-white max-sm:text-[2vmax]">Children living:</label
+        ><br />
+        <div
+          class="flex gap-[1.5vmax] mt-1 max-sm:flex-col max-sm:gap-[.3vmax]"
+        >
+          <div class="radiobox radiobox flex gap-[.4vmax] max-sm:gap-[.6vmax]">
+            <input
+              type="radio"
+              id="livingWithMe"
+              name="childrenLiving"
+              value="Living with me"
+              class="mr-2 max-sm:mr-[.5vmax]"
+            /><label class="text-white max-sm:text-[2vmax]" for="livingWithMe"
+              >Living with me</label
+            >
+          </div>
+          <div class="radiobox radiobox flex gap-[.4vmax] max-sm:gap-[.6vmax]">
+            <input
+              type="radio"
+              id="notLivingWithMe"
+              name="childrenLiving"
+              value="Not living with me"
+              class="mt-2 mr-2 max-sm:mr-[.5vmax]"
+            /><label
+              class="text-white max-sm:text-[2vmax]"
+              for="notLivingWithMe"
+              >Not living with me</label
+            >
+          </div>
         </div>
       </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+      <div class="mt-[1vmax] max-sm:mt-[2vmax]">
         <select
           name="religion"
           id="ddlReligion"
-          class="block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
           required
           data-validation-required-message="Please select a religion."
         >
@@ -379,68 +345,37 @@
           </optgroup>
         </select>
       </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax] max-sm:pr-[1.5vmax]">
-        <label class="text-white">Employed In:</label><br />
-        <div class="flex mt-1 max-sm:block">
-          <input
-            type="radio"
-            id="government"
-            name="employedIn"
-            value="Government"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="government"
-            >Government</label
-          >
-          <input
-            type="radio"
-            id="private"
-            name="employedIn"
-            value="Private"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="private"
-            >Private</label
-          >
-          <input
-            type="radio"
-            id="business"
-            name="employedIn"
-            value="Business"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="business"
-            >Business</label
-          >
-          <input
-            type="radio"
-            id="defence"
-            name="employedIn"
-            value="Defence"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="defence"
-            >Defence</label
-          >
-          <input
-            type="radio"
-            id="notWorking"
-            name="employedIn"
-            value="Not working"
-            class="mr-2 max-sm:mr-[.5vmax]"
-            required
-          /><label class="mr-8 max-sm:mr-[1.7vmax] text-white" for="notWorking"
-            >Not working</label
-          >
-        </div>
-      </div>
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
-          name="state"
           required
-          class="state block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
+          name="employedIn"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
         >
-          <option value="" disabled selected>Select State</option>
+          <option value="" disabled selected>Employed in</option>
+          <option value="Government">Government</option>
+          <option value="Private">Private</option>
+          <option value="Business">Business</option>
+          <option value="Defence">Defence</option>
+          <option value="Not working">Not working</option>
+        </select>
+      </div>
+      <div
+        class="flex mt-[1vmax] max-sm:mt-[1.5vmax] max-sm:flex-col max-sm:gap-[1.5vmax]"
+      >
+        <select
+          required
+          name="country"
+          class="country py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:w-full"
+        >
+          <option value="" disabled selected>Country</option>
+          <option value="India">India</option>
+        </select>
+        <select
+          required
+          name="state"
+          class="state py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:w-full"
+        >
+          <option value="" disabled selected>State</option>
           <option value="AP">Andhra Pradesh</option>
           <option value="AR">Arunachal Pradesh</option>
           <option value="AS">Assam</option>
@@ -471,14 +406,12 @@
           <option value="UK">Uttarakhand</option>
           <option value="WB">West Bengal</option>
         </select>
-      </div>
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
         <select
-          name="city"
           required
-          class="city block p-[.8vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
+          name="city"
+          class="city py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:w-full"
         >
-          <option value="" disabled selected>Select City</option>
+          <option value="" disabled selected>City</option>
         </select>
       </div>
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
@@ -494,19 +427,9 @@
         required
         type="text"
         name="mobileNumber"
-        placeholder="Mobile Number"
+        placeholder="Mobile number"
         class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
-      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
-        <select
-          required
-          name="country"
-          class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
-        >
-          <option value="" disabled selected>Select Country</option>
-          <option value="India">India</option>
-        </select>
-      </div>
       <input
         required
         type="email"
@@ -523,7 +446,7 @@
       />
       <button
         type="submit"
-        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:p-[1.5vmax] max-sm:mt-[3vmax]"
+        class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:p-[1.5vmax] max-sm:mt-[3vmax] max-sm:text-[2vmax]"
       >
         Register
       </button>
@@ -534,7 +457,7 @@
       Already have an account?
       <br />
       <a
-        class="[1.2vmax] text-white border-b-[1px] border-white pb-[3px] ml-[.2vmax]"
+        class="text-white border-b-[1px] border-white pb-[3px]"
         href="/user/login"
         >Login your account</a
       >
@@ -543,42 +466,289 @@
 </div>
 <script>
   const cities = {
-    AP: ["Visakhapatnam", "Vijayawada", "Guntur"],
-    AR: ["Itanagar", "Naharlagun"],
-    AS: ["Guwahati", "Dispur", "Jorhat"],
-    BR: ["Patna", "Gaya", "Bhagalpur"],
-    CT: ["Raipur", "Bhilai", "Korba"],
-    GO: ["Panaji", "Margao"],
-    GJ: ["Ahmedabad", "Vadodara", "Surat"],
-    HR: ["Chandigarh", "Faridabad", "Gurugram"],
-    HP: ["Shimla", "Dharamshala"],
-    JK: ["Srinagar", "Jammu"],
-    JH: ["Ranchi", "Jamshedpur"],
-    KA: ["Bengaluru", "Mysuru", "Hubli"],
-    KL: ["Thiruvananthapuram", "Kochi", "Kozhikode"],
-    MP: ["Bhopal", "Indore", "Gwalior"],
-    MH: ["Mumbai", "Pune", "Nagpur"],
-    MN: ["Imphal"],
-    ME: ["Shillong"],
-    MZ: ["Aizawl"],
-    NL: ["Kohima"],
-    OD: ["Bhubaneswar", "Cuttack"],
-    PB: ["Chandigarh", "Amritsar", "Ludhiana"],
-    RJ: ["Jaipur", "Udaipur", "Jodhpur"],
-    SK: ["Gangtok"],
-    TN: ["Chennai", "Coimbatore", "Madurai"],
-    TS: ["Hyderabad", "Warangal"],
-    TR: ["Agartala"],
-    UP: ["Lucknow", "Kanpur", "Agra"],
-    UK: ["Dehradun", "Haridwar"],
-    WB: ["Kolkata", "Siliguri", "Durgapur"],
+    AP: [
+      "Visakhapatnam",
+      "Vijayawada",
+      "Guntur",
+      "Nellore",
+      "Tirupati",
+      "Kurnool",
+      "Kakinada",
+      "Rajahmundry",
+      "Anantapur",
+      "Eluru",
+      "Kadapa",
+    ],
+    AR: [
+      "Itanagar",
+      "Naharlagun",
+      "Pasighat",
+      "Tawang",
+      "Ziro",
+      "Bomdila",
+      "Aalo",
+      "Tezu",
+    ],
+    AS: [
+      "Guwahati",
+      "Dispur",
+      "Jorhat",
+      "Dibrugarh",
+      "Silchar",
+      "Nagaon",
+      "Tinsukia",
+      "Tezpur",
+    ],
+    BR: [
+      "Patna",
+      "Gaya",
+      "Bhagalpur",
+      "Muzaffarpur",
+      "Purnia",
+      "Darbhanga",
+      "Bihar Sharif",
+      "Arrah",
+      "Begusarai",
+      "Katihar",
+    ],
+    CT: [
+      "Raipur",
+      "Bhilai",
+      "Korba",
+      "Bilaspur",
+      "Durg",
+      "Raigarh",
+      "Jagdalpur",
+      "Rajnandgaon",
+      "Ambikapur",
+    ],
+    GO: ["Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda", "Bicholim"],
+    GJ: [
+      "Ahmedabad",
+      "Vadodara",
+      "Surat",
+      "Rajkot",
+      "Bhavnagar",
+      "Jamnagar",
+      "Gandhinagar",
+      "Junagadh",
+      "Anand",
+      "Nadiad",
+    ],
+    HR: [
+      "Chandigarh",
+      "Faridabad",
+      "Gurugram",
+      "Panipat",
+      "Ambala",
+      "Yamunanagar",
+      "Rohtak",
+      "Hisar",
+      "Karnal",
+      "Sonipat",
+    ],
+    HP: [
+      "Shimla",
+      "Dharamshala",
+      "Manali",
+      "Mandi",
+      "Solan",
+      "Kullu",
+      "Hamirpur",
+      "Chamba",
+      "Bilaspur",
+      "Nahan",
+    ],
+    JK: [
+      "Srinagar",
+      "Jammu",
+      "Anantnag",
+      "Baramulla",
+      "Udhampur",
+      "Kathua",
+      "Sopore",
+      "Rajouri",
+    ],
+    JH: [
+      "Ranchi",
+      "Jamshedpur",
+      "Dhanbad",
+      "Bokaro",
+      "Deoghar",
+      "Hazaribagh",
+      "Giridih",
+      "Ramgarh",
+      "Phusro",
+    ],
+    KA: [
+      "Bengaluru",
+      "Mysuru",
+      "Hubli",
+      "Mangalore",
+      "Belagavi",
+      "Davangere",
+      "Ballari",
+      "Tumkur",
+      "Raichur",
+      "Bidar",
+      "Shivamogga",
+    ],
+    KL: [
+      "Thiruvananthapuram",
+      "Kochi",
+      "Kozhikode",
+      "Kollam",
+      "Thrissur",
+      "Alappuzha",
+      "Palakkad",
+      "Malappuram",
+      "Kottayam",
+      "Kannur",
+    ],
+    MP: [
+      "Bhopal",
+      "Indore",
+      "Gwalior",
+      "Jabalpur",
+      "Ujjain",
+      "Sagar",
+      "Ratlam",
+      "Satna",
+      "Rewa",
+      "Dewas",
+    ],
+    MH: [
+      "Mumbai",
+      "Pune",
+      "Nagpur",
+      "Thane",
+      "Nashik",
+      "Aurangabad",
+      "Solapur",
+      "Amravati",
+      "Kolhapur",
+      "Navi Mumbai",
+      "Latur",
+    ],
+    MN: [
+      "Imphal",
+      "Thoubal",
+      "Bishnupur",
+      "Churachandpur",
+      "Ukhrul",
+      "Senapati",
+    ],
+    ME: ["Shillong", "Tura", "Jowai", "Nongpoh", "Baghmara"],
+    MZ: ["Aizawl", "Lunglei", "Saiha", "Champhai", "Serchhip"],
+    NL: [
+      "Kohima",
+      "Dimapur",
+      "Mokokchung",
+      "Tuensang",
+      "Mon",
+      "Wokha",
+      "Zunheboto",
+    ],
+    OD: [
+      "Bhubaneswar",
+      "Cuttack",
+      "Rourkela",
+      "Berhampur",
+      "Sambalpur",
+      "Puri",
+      "Balasore",
+      "Baripada",
+      "Bhadrak",
+      "Angul",
+    ],
+    PB: [
+      "Chandigarh",
+      "Amritsar",
+      "Ludhiana",
+      "Jalandhar",
+      "Patiala",
+      "Bathinda",
+      "Hoshiarpur",
+      "Mohali",
+      "Pathankot",
+    ],
+    RJ: [
+      "Jaipur",
+      "Udaipur",
+      "Jodhpur",
+      "Kota",
+      "Ajmer",
+      "Bikaner",
+      "Alwar",
+      "Bharatpur",
+      "Sikar",
+      "Pali",
+    ],
+    SK: ["Gangtok", "Namchi", "Gyalshing", "Mangan", "Jorethang"],
+    TN: [
+      "Chennai",
+      "Coimbatore",
+      "Madurai",
+      "Tiruchirappalli",
+      "Salem",
+      "Tirunelveli",
+      "Vellore",
+      "Thoothukudi",
+      "Erode",
+      "Dindigul",
+    ],
+    TS: [
+      "Hyderabad",
+      "Warangal",
+      "Nizamabad",
+      "Khammam",
+      "Karimnagar",
+      "Mahbubnagar",
+      "Ramagundam",
+      "Siddipet",
+    ],
+    TR: ["Agartala", "Udaipur", "Kailashahar", "Dharmanagar"],
+    UP: [
+      "Lucknow",
+      "Kanpur",
+      "Agra",
+      "Varanasi",
+      "Meerut",
+      "Allahabad",
+      "Bareilly",
+      "Aligarh",
+      "Moradabad",
+      "Ghaziabad",
+      "Gorakhpur",
+    ],
+    UK: [
+      "Dehradun",
+      "Haridwar",
+      "Roorkee",
+      "Haldwani",
+      "Rishikesh",
+      "Nainital",
+      "Kashipur",
+      "Rudrapur",
+    ],
+    WB: [
+      "Kolkata",
+      "Siliguri",
+      "Durgapur",
+      "Asansol",
+      "Howrah",
+      "Kharagpur",
+      "Bardhaman",
+      "Malda",
+      "Jalpaiguri",
+    ],
   };
 
   document.querySelector(".state").addEventListener("change", function () {
     const state = this.value;
     const citySelect = document.querySelector(".city");
     citySelect.innerHTML =
-      '<option value="" disabled selected>Select City</option>';
+      '<option value="" disabled selected>Select city</option>';
 
     if (state && cities[state]) {
       cities[state].forEach((city) => {
