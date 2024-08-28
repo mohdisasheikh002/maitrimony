@@ -1,11 +1,12 @@
 <% if(user){ %>
 <div
-  class="navbox absolute top-0 left-0 h-[5vmax] w-full bg-[#fff] flex items-center justify-between px-[5vmax] text-[#fff] z-20 max-sm:px-[2.5vmax] max-sm:h-0 max-sm:py-[4vmax]"
+  class="navbox relative top-0 left-0 h-[5vmax] w-full bg-[#fff] flex items-center justify-between px-[5vmax] text-[#000] z-10 max-sm:px-[2.5vmax] max-sm:h-0 max-sm:py-[4vmax] overflow-hidden"
 >
   <img
-    src="/images/WhatsApp_Image_2024-08-14_at_16.24.58_10922adb-removebg.png"
+    href="/"
+    src="/images/logo.jpg"
     alt=""
-    class="h-100% object-contain"
+    class="h-[90%] object-cover max-sm:h-[7vmax]"
   />
   <div
     class="linkbox absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex gap-[2.5vmax] max-sm:hidden"
@@ -18,7 +19,7 @@
   </div>
   <a href="/user/logout" class="max-sm:hidden"
     ><button
-      class="py-[.5vmax] px-[1.5vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#800000] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax] max-sm:hidden"
+      class="py-[.5vmax] px-[1.5vmax] border-2 border-[#800000] text-[#800000] rounded-lg text-[1vmax] hover:bg-[#800000] hover:text-[#fff] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax] max-sm:hidden"
     >
       Logout
     </button></a
@@ -45,7 +46,11 @@
 <div
   class="navbox absolute top-0 left-0 h-[5vmax] w-full bg-[#fff] flex items-center justify-between px-[5vmax] text-[#fff] z-10 max-sm:px-[2.5vmax] max-sm:h-0 max-sm:py-[4vmax] overflow-hidden"
 >
-  <img src="/images/logo.jpg" alt="" class="h-[7vmax] object-cover" />
+  <img
+    src="/images/logo.jpg"
+    alt=""
+    class="h-[90%] object-cover max-sm:h-[7vmax]"
+  />
   <div
     class="linkbox absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex gap-[2.5vmax] max-sm:hidden"
   >
@@ -61,14 +66,14 @@
   <div class="buttonbox flex gap-2 max-sm:hidden">
     <a href="/user/register"
       ><button
-        class="py-[.5vmax] w-[7vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#800000] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
+        class="py-[.5vmax] w-[7vmax] border-2 border-[#800000] text-[#800000] rounded-lg text-[1vmax] hover:text-[#fff] hover:bg-[#800000] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
       >
         Register
       </button></a
     >
     <a href="/user/login"
       ><button
-        class="py-[.5vmax] w-[7vmax] border-2 border-white text-white rounded-lg text-[1vmax] hover:bg-white hover:text-[#800000] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
+        class="py-[.5vmax] w-[7vmax] border-2 border-[#800000] text-[#800000] rounded-lg text-[1vmax] hover:text-[#fff] hover:bg-[#800000] hover:font-medium max-sm:py-[.75vmax] max-sm:w-[11vmax] max-sm:text-[1.8vmax]"
       >
         Login
       </button></a
