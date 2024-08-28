@@ -594,6 +594,30 @@ video {
   top: 8vmax;
 }
 
+.left-\[\] {
+  left: ;
+}
+
+.left-\[-1vmax\] {
+  left: -1vmax;
+}
+
+.left-\[-2\.5vmax\] {
+  left: -2.5vmax;
+}
+
+.left-\[2\.5vmax\] {
+  left: 2.5vmax;
+}
+
+.left-\[0vmax\] {
+  left: 0vmax;
+}
+
+.left-\[\.5vmax\] {
+  left: .5vmax;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -696,6 +720,30 @@ video {
 
 .h-\[140\%\] {
   height: 140%;
+}
+
+.h-\[95\%\] {
+  height: 95%;
+}
+
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[10vmax\] {
+  height: 10vmax;
+}
+
+.h-\[vmax\] {
+  height: vmax;
+}
+
+.h-\[7vmax\] {
+  height: 7vmax;
 }
 
 .min-h-screen {
@@ -1140,6 +1188,10 @@ video {
 }
 
 @media not all and (min-width: 640px) {
+  .max-sm\:absolute {
+    position: absolute;
+  }
+
   .max-sm\:left-\[1\.5vmax\] {
     left: 1.5vmax;
   }
@@ -1206,6 +1258,18 @@ video {
 
   .max-sm\:h-\[7vmax\] {
     height: 7vmax;
+  }
+
+  .max-sm\:h-8 {
+    height: 2rem;
+  }
+
+  .max-sm\:h-\[8\] {
+    height: 8;
+  }
+
+  .max-sm\:h-\[8vmax\] {
+    height: 8vmax;
   }
 
   .max-sm\:w-\[100\%\] {
