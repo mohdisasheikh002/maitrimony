@@ -95,6 +95,13 @@ body {
   transition: 0.25s linear;
 }
 
+.contentBox {
+  background-image: url(/images/random.jpeg);
+  background-size: cover;
+  background-position: center -20vmax;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 30cm) {
   .menubtn {
     height: 4.2vmax;
@@ -108,7 +115,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-2deg);
     height: 2px;
-    width: 10vmax;
+    width: 11vmax;
     background-color: #fff;
+  }
+
+  .contentBox {
+    background-size: cover;
+    background-position: center;
   }
 }
