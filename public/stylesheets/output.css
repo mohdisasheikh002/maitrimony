@@ -820,6 +820,10 @@ video {
   gap: 2.5vmax;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1096,6 +1100,14 @@ video {
 
 .text-\[3vmax\] {
   font-size: 3vmax;
+}
+
+.text-\[\.8vmax\] {
+  font-size: .8vmax;
+}
+
+.text-\[\.9vmax\] {
+  font-size: .9vmax;
 }
 
 .font-bold {
