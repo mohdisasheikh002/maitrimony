@@ -1304,6 +1304,10 @@ video {
     margin-top: 4vmax;
   }
 
+  .max-sm\:ml-\[-\.4vmax\] {
+    margin-left: -.4vmax;
+  }
+
   .max-sm\:flex {
     display: flex;
   }
