@@ -844,6 +844,14 @@ video {
   gap: 2.5vmax;
 }
 
+.gap-\[vmax\] {
+  gap: vmax;
+}
+
+.gap-\[3\.5vmax\] {
+  gap: 3.5vmax;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -898,6 +906,10 @@ video {
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-solid {
@@ -1417,6 +1429,10 @@ video {
 
   .max-sm\:gap-\[5vmax\] {
     gap: 5vmax;
+  }
+
+  .max-sm\:gap-\[7vmax\] {
+    gap: 7vmax;
   }
 
   .max-sm\:overflow-x-hidden {
