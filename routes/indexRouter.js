@@ -14,4 +14,8 @@ router.get("/memberships", function (req, res, next) {
   res.render("membership", { user: req.user });
 });
 
+router.get("/contact", function (req, res, next) {
+  res.render("contact", { user: req.user });
+});
+
 module.exports = router;
