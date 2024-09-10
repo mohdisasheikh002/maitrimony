@@ -1451,8 +1451,8 @@ video {
     font-size: 1.5vmax;
   }
 
-  .max-sm\:text-\[1\.7vmax\] {
-    font-size: 1.7vmax;
+  .max-sm\:text-\[1\.6vmax\] {
+    font-size: 1.6vmax;
   }
 
   .max-sm\:text-\[1\.8vmax\] {
@@ -1487,10 +1487,6 @@ video {
     font-size: 4vmax;
   }
 
-  .max-sm\:text-\[1\.6vmax\] {
-    font-size: 1.6vmax;
-  }
-
   .max-sm\:leading-\[2\.1vmax\] {
     line-height: 2.1vmax;
   }
@@ -1510,9 +1506,5 @@ video {
   .max-sm\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .max-sm\:text-\[1\.vmax\] {
-    color: 1.vmax;
   }
 }
