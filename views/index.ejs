@@ -2,7 +2,7 @@
 <!--  -->
 <div class="wrapper min-h-screen w-full bg-[#800000] overflow-x-hidden">
   <div
-    class="slideHolder relative h-[80vh] w-[100%] bg-[#800000] max-sm:h-[40vh]"
+    class="sec1 slideHolder relative h-[80vh] w-[100%] bg-[#800000] max-sm:h-[40vh]"
   >
     <div class="imgbox1 absolute top-0 left-0 z-[3] h-full w-full">
       <img
@@ -26,49 +26,51 @@
       />
     </div>
   </div>
-  <div
-    class="holder formHolder h-screen w-full flex flex-col items-center justify-center relative max-sm:p-[2.5vmax]"
-  >
+  <div class="sec2 h-screen w-full">
     <div
-      class="text-center bg-white p-[4vmax] pt-[3.5vmax] rounded-md z-10 max-sm:p-[2.5vmax] max-sm:w-full max-sm:pt-[2vmax] max-sm:pb-[3.5vmax]"
+      class="holder formHolder relative h-screen w-full flex flex-col items-center justify-center mt-[-15vmax] max-sm:p-[2.5vmax]"
     >
-      <h1
-        class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3vmax] bg-[#800000]"
-      >
-        Register for free
-      </h1>
-      <form action="/user/login" method="post">
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          required
-          class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:mt-[2vmax] max-sm:text-[2vmax]"
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-          class="passwordInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:mt-[1.5vmax] max-sm:text-[2vmax]"
-        />
-        <button
-          type="submit"
-          class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:p-[1.5vmax] max-sm:mt-[3vmax] max-sm:text-[2vmax]"
-        >
-          Login
-        </button>
-      </form>
       <div
-        class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%] max-sm:text-[2vmax]"
+        class="text-center bg-white p-[4vmax] pt-[3.5vmax] rounded-md z-10 max-sm:p-[2.5vmax] max-sm:w-full max-sm:pt-[2vmax] max-sm:pb-[3.5vmax]"
       >
-        Don't have an account?
-        <br />
-        <a
-          class="text-white border-b-[1px] border-white pb-[3px]"
-          href="/user/register"
-          >Create new account</a
+        <h1
+          class="text-[2vmax] text-white text-center tracking-tight max-sm:text-[3vmax] bg-[#800000]"
         >
+          Register for free
+        </h1>
+        <form action="/user/login" method="post">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+            class="usernameInput block p-[.8vmax] w-[25vmax] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:mt-[2vmax] max-sm:text-[2vmax]"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            class="passwordInput block p-[.8vmax] w-[25vmax] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:w-full max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:mt-[1.5vmax] max-sm:text-[2vmax]"
+          />
+          <button
+            type="submit"
+            class="block w-[100%] p-[1vmax] mt-[2vmax] bg-blue-600 text-white rounded-md max-sm:p-[1.5vmax] max-sm:mt-[3vmax] max-sm:text-[2vmax]"
+          >
+            Login
+          </button>
+        </form>
+        <div
+          class="w-[25vmax] mt-[1.5vmax] text-left text-white max-sm:mt-[2.5vmax] max-sm:text-center max-sm:w-[100%] max-sm:text-[2vmax]"
+        >
+          Don't have an account?
+          <br />
+          <a
+            class="text-white border-b-[1px] border-white pb-[3px]"
+            href="/user/register"
+            >Create new account</a
+          >
+        </div>
       </div>
     </div>
   </div>

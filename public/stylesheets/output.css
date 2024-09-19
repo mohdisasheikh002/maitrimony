@@ -598,6 +598,18 @@ video {
   top: 8vmax;
 }
 
+.top-\[\] {
+  top: ;
+}
+
+.top-\[-30\] {
+  top: -30;
+}
+
+.top-\[-30\%\] {
+  top: -30%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -672,6 +684,30 @@ video {
 
 .mt-\[4vmax\] {
   margin-top: 4vmax;
+}
+
+.mt-\[-\] {
+  margin-top: -;
+}
+
+.mt-\[-10vmax\] {
+  margin-top: -10vmax;
+}
+
+.mt-\[30vmax\] {
+  margin-top: 30vmax;
+}
+
+.mt-\[-30vmax\] {
+  margin-top: -30vmax;
+}
+
+.mt-\[-20vmax\] {
+  margin-top: -20vmax;
+}
+
+.mt-\[-15vmax\] {
+  margin-top: -15vmax;
 }
 
 .block {
