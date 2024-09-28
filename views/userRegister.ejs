@@ -198,29 +198,18 @@
           <option value="8-0">Islam</option>
           <option value="12-0">Sikh</option>
           <option value="11-0">Nonreligious</option>
-          <optgroup label="Christianity Subcategories">
-            <option value="5-3">Christianity - Anglican</option>
-            <option value="5-4">Christianity - Baptist</option>
-            <option value="5-5">Christianity - Born Again</option>
-            <option value="5-6">Christianity - Catholic</option>
-            <option value="5-7">Christianity - Catholic Kananaya</option>
-            <option value="5-8">Christianity - Catholic Latin</option>
-            <option value="5-9">Christianity - Catholic Malankara</option>
-            <option value="5-10">Christianity - Catholic Roman</option>
-            <option value="5-11">Christianity - Catholic Syrian</option>
-            <option value="5-12">Christianity - CMS</option>
-            <option value="5-13">Christianity - CSI</option>
-            <option value="5-14">Christianity - Evangelical</option>
-            <option value="5-15">Christianity - Jacobite</option>
-            <option value="5-16">Christianity - Marthomite</option>
-            <option value="5-17">Christianity - Nadar</option>
-            <option value="5-18">Christianity - Orthodox</option>
-            <option value="5-19">Christianity - Pentacost</option>
-            <option value="5-20">Christianity - Protestant</option>
-            <option value="5-1">Christianity - Thai</option>
-            <option value="5-2">Christianity - Tibetan</option>
-          </optgroup>
-          <optgroup label="Hindu Subcategories">
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[2vmax]">
+        <select
+          name="caste"
+          id="ddlCaste"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+          required
+          data-validation-required-message="Please select a caste."
+        >
+          <option value="" disabled selected>Caste</option>
+          <optgroup label="Hindu Caste">
             <option value="7-172">Hindu - Ganiga</option>
             <option value="7-22">Hindu - 96K Kokanastha</option>
             <option value="7-23">Hindu - Adi Dravida</option>
@@ -321,7 +310,29 @@
             <option value="7-116">Hindu - Vishwakarma</option>
             <option value="7-117">Hindu - Yadav</option>
           </optgroup>
-          <optgroup label="Islam Subcategories">
+          <optgroup label="Christianity Caste">
+            <option value="5-3">Christianity - Anglican</option>
+            <option value="5-4">Christianity - Baptist</option>
+            <option value="5-5">Christianity - Born Again</option>
+            <option value="5-6">Christianity - Catholic</option>
+            <option value="5-7">Christianity - Catholic Kananaya</option>
+            <option value="5-8">Christianity - Catholic Latin</option>
+            <option value="5-9">Christianity - Catholic Malankara</option>
+            <option value="5-10">Christianity - Catholic Roman</option>
+            <option value="5-11">Christianity - Catholic Syrian</option>
+            <option value="5-12">Christianity - CMS</option>
+            <option value="5-13">Christianity - CSI</option>
+            <option value="5-14">Christianity - Evangelical</option>
+            <option value="5-15">Christianity - Jacobite</option>
+            <option value="5-16">Christianity - Marthomite</option>
+            <option value="5-17">Christianity - Nadar</option>
+            <option value="5-18">Christianity - Orthodox</option>
+            <option value="5-19">Christianity - Pentacost</option>
+            <option value="5-20">Christianity - Protestant</option>
+            <option value="5-1">Christianity - Thai</option>
+            <option value="5-2">Christianity - Tibetan</option>
+          </optgroup>
+          <optgroup label="Islam Caste">
             <option value="8-148">Islam - Ahmadiyya</option>
             <option value="8-149">Islam - Hanafi</option>
             <option value="8-150">Islam - Hanbali</option>
@@ -334,7 +345,7 @@
             <option value="8-157">Islam - Sunni</option>
             <option value="8-158">Islam - Sufi</option>
           </optgroup>
-          <optgroup label="Sikh Subcategories">
+          <optgroup label="Sikh Caste">
             <option value="12-152">Sikh - Amritdhari</option>
             <option value="12-153">Sikh - Clean Shaven</option>
             <option value="12-154">Sikh - Gursikh</option>
@@ -377,6 +388,14 @@
           class="state py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:w-full"
         >
           <option value="" disabled selected>State</option>
+          <option value="MP">Madhya Pradesh</option>
+        </select>
+        <!-- <select
+          required
+          name="state"
+          class="state py-[.8vmax] px-[.5vmax] w-1/3 outline-none rounded-md placeholder:text-zinc-500 mr-[2%] max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax] max-sm:w-full"
+        >
+          <option value="" disabled selected>State</option>
           <option value="AP">Andhra Pradesh</option>
           <option value="AR">Arunachal Pradesh</option>
           <option value="AS">Assam</option>
@@ -406,7 +425,7 @@
           <option value="UP">Uttar Pradesh</option>
           <option value="UK">Uttarakhand</option>
           <option value="WB">West Bengal</option>
-        </select>
+        </select> -->
         <select
           required
           name="city"
@@ -467,283 +486,339 @@
 </div>
 <script>
   const cities = {
-    AP: [
-      "Visakhapatnam",
-      "Vijayawada",
-      "Guntur",
-      "Nellore",
-      "Tirupati",
-      "Kurnool",
-      "Kakinada",
-      "Rajahmundry",
-      "Anantapur",
-      "Eluru",
-      "Kadapa",
-    ],
-    AR: [
-      "Itanagar",
-      "Naharlagun",
-      "Pasighat",
-      "Tawang",
-      "Ziro",
-      "Bomdila",
-      "Aalo",
-      "Tezu",
-    ],
-    AS: [
-      "Guwahati",
-      "Dispur",
-      "Jorhat",
-      "Dibrugarh",
-      "Silchar",
-      "Nagaon",
-      "Tinsukia",
-      "Tezpur",
-    ],
-    BR: [
-      "Patna",
-      "Gaya",
-      "Bhagalpur",
-      "Muzaffarpur",
-      "Purnia",
-      "Darbhanga",
-      "Bihar Sharif",
-      "Arrah",
-      "Begusarai",
-      "Katihar",
-    ],
-    CT: [
-      "Raipur",
-      "Bhilai",
-      "Korba",
-      "Bilaspur",
-      "Durg",
-      "Raigarh",
-      "Jagdalpur",
-      "Rajnandgaon",
-      "Ambikapur",
-    ],
-    GO: ["Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda", "Bicholim"],
-    GJ: [
-      "Ahmedabad",
-      "Vadodara",
-      "Surat",
-      "Rajkot",
-      "Bhavnagar",
-      "Jamnagar",
-      "Gandhinagar",
-      "Junagadh",
-      "Anand",
-      "Nadiad",
-    ],
-    HR: [
-      "Chandigarh",
-      "Faridabad",
-      "Gurugram",
-      "Panipat",
-      "Ambala",
-      "Yamunanagar",
-      "Rohtak",
-      "Hisar",
-      "Karnal",
-      "Sonipat",
-    ],
-    HP: [
-      "Shimla",
-      "Dharamshala",
-      "Manali",
-      "Mandi",
-      "Solan",
-      "Kullu",
-      "Hamirpur",
-      "Chamba",
-      "Bilaspur",
-      "Nahan",
-    ],
-    JK: [
-      "Srinagar",
-      "Jammu",
-      "Anantnag",
-      "Baramulla",
-      "Udhampur",
-      "Kathua",
-      "Sopore",
-      "Rajouri",
-    ],
-    JH: [
-      "Ranchi",
-      "Jamshedpur",
-      "Dhanbad",
-      "Bokaro",
-      "Deoghar",
-      "Hazaribagh",
-      "Giridih",
-      "Ramgarh",
-      "Phusro",
-    ],
-    KA: [
-      "Bengaluru",
-      "Mysuru",
-      "Hubli",
-      "Mangalore",
-      "Belagavi",
-      "Davangere",
-      "Ballari",
-      "Tumkur",
-      "Raichur",
-      "Bidar",
-      "Shivamogga",
-    ],
-    KL: [
-      "Thiruvananthapuram",
-      "Kochi",
-      "Kozhikode",
-      "Kollam",
-      "Thrissur",
-      "Alappuzha",
-      "Palakkad",
-      "Malappuram",
-      "Kottayam",
-      "Kannur",
-    ],
     MP: [
+      "Agar Malwa",
+      "Alirajpur",
+      "Anuppur",
+      "Ashoknagar",
+      "Balaghat",
+      "Barwani",
+      "Betul",
+      "Bhind",
       "Bhopal",
-      "Indore",
-      "Gwalior",
-      "Jabalpur",
-      "Ujjain",
-      "Sagar",
-      "Ratlam",
-      "Satna",
-      "Rewa",
+      "Burhanpur",
+      "Chhatarpur",
+      "Chhindwara",
+      "Damoh",
+      "Datia",
       "Dewas",
-    ],
-    MH: [
-      "Mumbai",
-      "Pune",
-      "Nagpur",
-      "Thane",
-      "Nashik",
-      "Aurangabad",
-      "Solapur",
-      "Amravati",
-      "Kolhapur",
-      "Navi Mumbai",
-      "Latur",
-    ],
-    MN: [
-      "Imphal",
-      "Thoubal",
-      "Bishnupur",
-      "Churachandpur",
-      "Ukhrul",
-      "Senapati",
-    ],
-    ME: ["Shillong", "Tura", "Jowai", "Nongpoh", "Baghmara"],
-    MZ: ["Aizawl", "Lunglei", "Saiha", "Champhai", "Serchhip"],
-    NL: [
-      "Kohima",
-      "Dimapur",
-      "Mokokchung",
-      "Tuensang",
-      "Mon",
-      "Wokha",
-      "Zunheboto",
-    ],
-    OD: [
-      "Bhubaneswar",
-      "Cuttack",
-      "Rourkela",
-      "Berhampur",
-      "Sambalpur",
-      "Puri",
-      "Balasore",
-      "Baripada",
-      "Bhadrak",
-      "Angul",
-    ],
-    PB: [
-      "Chandigarh",
-      "Amritsar",
-      "Ludhiana",
-      "Jalandhar",
-      "Patiala",
-      "Bathinda",
-      "Hoshiarpur",
-      "Mohali",
-      "Pathankot",
-    ],
-    RJ: [
-      "Jaipur",
-      "Udaipur",
-      "Jodhpur",
-      "Kota",
-      "Ajmer",
-      "Bikaner",
-      "Alwar",
-      "Bharatpur",
-      "Sikar",
-      "Pali",
-    ],
-    SK: ["Gangtok", "Namchi", "Gyalshing", "Mangan", "Jorethang"],
-    TN: [
-      "Chennai",
-      "Coimbatore",
-      "Madurai",
-      "Tiruchirappalli",
-      "Salem",
-      "Tirunelveli",
-      "Vellore",
-      "Thoothukudi",
-      "Erode",
-      "Dindigul",
-    ],
-    TS: [
-      "Hyderabad",
-      "Warangal",
-      "Nizamabad",
-      "Khammam",
-      "Karimnagar",
-      "Mahbubnagar",
-      "Ramagundam",
-      "Siddipet",
-    ],
-    TR: ["Agartala", "Udaipur", "Kailashahar", "Dharmanagar"],
-    UP: [
-      "Lucknow",
-      "Kanpur",
-      "Agra",
-      "Varanasi",
-      "Meerut",
-      "Allahabad",
-      "Bareilly",
-      "Aligarh",
-      "Moradabad",
-      "Ghaziabad",
-      "Gorakhpur",
-    ],
-    UK: [
-      "Dehradun",
-      "Haridwar",
-      "Roorkee",
-      "Haldwani",
-      "Rishikesh",
-      "Nainital",
-      "Kashipur",
-      "Rudrapur",
-    ],
-    WB: [
-      "Kolkata",
-      "Siliguri",
-      "Durgapur",
-      "Asansol",
-      "Howrah",
-      "Kharagpur",
-      "Bardhaman",
-      "Malda",
-      "Jalpaiguri",
+      "Dhar",
+      "Dindori",
+      "Guna",
+      "Gwalior",
+      "Harda",
+      "Narmadapuram",
+      "Indore",
+      "Jabalpur",
+      "Jhabua",
+      "Katni",
+      "Khandwa",
+      "Khargone",
+      "Mandla",
+      "Mandsaur",
+      "Morena",
+      "Narsinghpur",
+      "Neemuch",
+      "Niwari",
+      "Panna",
+      "Raisen",
+      "Rajgarh",
+      "Ratlam",
+      "Rewa",
+      "Sagar",
+      "Satna",
+      "Sehore",
+      "Seoni",
+      "Shahdol",
+      "Shajapur",
+      "Sheopur",
+      "Shivpuri",
+      "Sidhi",
+      "Singrauli",
+      "Tikamgarh",
+      "Ujjain",
+      "Umaria",
+      "Vidisha",
     ],
   };
+  // const cities = {
+  //   AP: [
+  //     "Visakhapatnam",
+  //     "Vijayawada",
+  //     "Guntur",
+  //     "Nellore",
+  //     "Tirupati",
+  //     "Kurnool",
+  //     "Kakinada",
+  //     "Rajahmundry",
+  //     "Anantapur",
+  //     "Eluru",
+  //     "Kadapa",
+  //   ],
+  //   AR: [
+  //     "Itanagar",
+  //     "Naharlagun",
+  //     "Pasighat",
+  //     "Tawang",
+  //     "Ziro",
+  //     "Bomdila",
+  //     "Aalo",
+  //     "Tezu",
+  //   ],
+  //   AS: [
+  //     "Guwahati",
+  //     "Dispur",
+  //     "Jorhat",
+  //     "Dibrugarh",
+  //     "Silchar",
+  //     "Nagaon",
+  //     "Tinsukia",
+  //     "Tezpur",
+  //   ],
+  //   BR: [
+  //     "Patna",
+  //     "Gaya",
+  //     "Bhagalpur",
+  //     "Muzaffarpur",
+  //     "Purnia",
+  //     "Darbhanga",
+  //     "Bihar Sharif",
+  //     "Arrah",
+  //     "Begusarai",
+  //     "Katihar",
+  //   ],
+  //   CT: [
+  //     "Raipur",
+  //     "Bhilai",
+  //     "Korba",
+  //     "Bilaspur",
+  //     "Durg",
+  //     "Raigarh",
+  //     "Jagdalpur",
+  //     "Rajnandgaon",
+  //     "Ambikapur",
+  //   ],
+  //   GO: ["Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda", "Bicholim"],
+  //   GJ: [
+  //     "Ahmedabad",
+  //     "Vadodara",
+  //     "Surat",
+  //     "Rajkot",
+  //     "Bhavnagar",
+  //     "Jamnagar",
+  //     "Gandhinagar",
+  //     "Junagadh",
+  //     "Anand",
+  //     "Nadiad",
+  //   ],
+  //   HR: [
+  //     "Chandigarh",
+  //     "Faridabad",
+  //     "Gurugram",
+  //     "Panipat",
+  //     "Ambala",
+  //     "Yamunanagar",
+  //     "Rohtak",
+  //     "Hisar",
+  //     "Karnal",
+  //     "Sonipat",
+  //   ],
+  //   HP: [
+  //     "Shimla",
+  //     "Dharamshala",
+  //     "Manali",
+  //     "Mandi",
+  //     "Solan",
+  //     "Kullu",
+  //     "Hamirpur",
+  //     "Chamba",
+  //     "Bilaspur",
+  //     "Nahan",
+  //   ],
+  //   JK: [
+  //     "Srinagar",
+  //     "Jammu",
+  //     "Anantnag",
+  //     "Baramulla",
+  //     "Udhampur",
+  //     "Kathua",
+  //     "Sopore",
+  //     "Rajouri",
+  //   ],
+  //   JH: [
+  //     "Ranchi",
+  //     "Jamshedpur",
+  //     "Dhanbad",
+  //     "Bokaro",
+  //     "Deoghar",
+  //     "Hazaribagh",
+  //     "Giridih",
+  //     "Ramgarh",
+  //     "Phusro",
+  //   ],
+  //   KA: [
+  //     "Bengaluru",
+  //     "Mysuru",
+  //     "Hubli",
+  //     "Mangalore",
+  //     "Belagavi",
+  //     "Davangere",
+  //     "Ballari",
+  //     "Tumkur",
+  //     "Raichur",
+  //     "Bidar",
+  //     "Shivamogga",
+  //   ],
+  //   KL: [
+  //     "Thiruvananthapuram",
+  //     "Kochi",
+  //     "Kozhikode",
+  //     "Kollam",
+  //     "Thrissur",
+  //     "Alappuzha",
+  //     "Palakkad",
+  //     "Malappuram",
+  //     "Kottayam",
+  //     "Kannur",
+  //   ],
+  //   MP: [
+  //     "Bhopal",
+  //     "Indore",
+  //     "Gwalior",
+  //     "Jabalpur",
+  //     "Ujjain",
+  //     "Sagar",
+  //     "Ratlam",
+  //     "Satna",
+  //     "Rewa",
+  //     "Dewas",
+  //   ],
+  //   MH: [
+  //     "Mumbai",
+  //     "Pune",
+  //     "Nagpur",
+  //     "Thane",
+  //     "Nashik",
+  //     "Aurangabad",
+  //     "Solapur",
+  //     "Amravati",
+  //     "Kolhapur",
+  //     "Navi Mumbai",
+  //     "Latur",
+  //   ],
+  //   MN: [
+  //     "Imphal",
+  //     "Thoubal",
+  //     "Bishnupur",
+  //     "Churachandpur",
+  //     "Ukhrul",
+  //     "Senapati",
+  //   ],
+  //   ME: ["Shillong", "Tura", "Jowai", "Nongpoh", "Baghmara"],
+  //   MZ: ["Aizawl", "Lunglei", "Saiha", "Champhai", "Serchhip"],
+  //   NL: [
+  //     "Kohima",
+  //     "Dimapur",
+  //     "Mokokchung",
+  //     "Tuensang",
+  //     "Mon",
+  //     "Wokha",
+  //     "Zunheboto",
+  //   ],
+  //   OD: [
+  //     "Bhubaneswar",
+  //     "Cuttack",
+  //     "Rourkela",
+  //     "Berhampur",
+  //     "Sambalpur",
+  //     "Puri",
+  //     "Balasore",
+  //     "Baripada",
+  //     "Bhadrak",
+  //     "Angul",
+  //   ],
+  //   PB: [
+  //     "Chandigarh",
+  //     "Amritsar",
+  //     "Ludhiana",
+  //     "Jalandhar",
+  //     "Patiala",
+  //     "Bathinda",
+  //     "Hoshiarpur",
+  //     "Mohali",
+  //     "Pathankot",
+  //   ],
+  //   RJ: [
+  //     "Jaipur",
+  //     "Udaipur",
+  //     "Jodhpur",
+  //     "Kota",
+  //     "Ajmer",
+  //     "Bikaner",
+  //     "Alwar",
+  //     "Bharatpur",
+  //     "Sikar",
+  //     "Pali",
+  //   ],
+  //   SK: ["Gangtok", "Namchi", "Gyalshing", "Mangan", "Jorethang"],
+  //   TN: [
+  //     "Chennai",
+  //     "Coimbatore",
+  //     "Madurai",
+  //     "Tiruchirappalli",
+  //     "Salem",
+  //     "Tirunelveli",
+  //     "Vellore",
+  //     "Thoothukudi",
+  //     "Erode",
+  //     "Dindigul",
+  //   ],
+  //   TS: [
+  //     "Hyderabad",
+  //     "Warangal",
+  //     "Nizamabad",
+  //     "Khammam",
+  //     "Karimnagar",
+  //     "Mahbubnagar",
+  //     "Ramagundam",
+  //     "Siddipet",
+  //   ],
+  //   TR: ["Agartala", "Udaipur", "Kailashahar", "Dharmanagar"],
+  //   UP: [
+  //     "Lucknow",
+  //     "Kanpur",
+  //     "Agra",
+  //     "Varanasi",
+  //     "Meerut",
+  //     "Allahabad",
+  //     "Bareilly",
+  //     "Aligarh",
+  //     "Moradabad",
+  //     "Ghaziabad",
+  //     "Gorakhpur",
+  //   ],
+  //   UK: [
+  //     "Dehradun",
+  //     "Haridwar",
+  //     "Roorkee",
+  //     "Haldwani",
+  //     "Rishikesh",
+  //     "Nainital",
+  //     "Kashipur",
+  //     "Rudrapur",
+  //   ],
+  //   WB: [
+  //     "Kolkata",
+  //     "Siliguri",
+  //     "Durgapur",
+  //     "Asansol",
+  //     "Howrah",
+  //     "Kharagpur",
+  //     "Bardhaman",
+  //     "Malda",
+  //     "Jalpaiguri",
+  //   ],
+  // };
 
   document.querySelector(".state").addEventListener("change", function () {
     const state = this.value;
