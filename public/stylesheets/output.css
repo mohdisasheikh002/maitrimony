@@ -790,6 +790,10 @@ video {
   min-height: 100vh;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1536,6 +1540,10 @@ video {
 
 .text-\[\#80000\] {
   color: #80000;
+}
+
+.text-\[2\] {
+  color: 2;
 }
 
 .shadow-none {

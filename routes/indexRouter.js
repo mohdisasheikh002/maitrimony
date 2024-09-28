@@ -18,4 +18,8 @@ router.get("/contact", function (req, res, next) {
   res.render("contact", { user: req.user });
 });
 
+router.get("/privacy-policy", function (req, res, next) {
+  res.render("privacy-policy", { user: req.user });
+});
+
 module.exports = router;
