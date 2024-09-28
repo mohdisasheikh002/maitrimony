@@ -1160,6 +1160,15 @@ video {
   background-color: rgb(229 173 77 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#80000\] {
+  background-color: #80000;
+}
+
+.bg-\[\#e6b157\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 177 87 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1525,6 +1534,10 @@ video {
   color: ;
 }
 
+.text-\[\#80000\] {
+  color: #80000;
+}
+
 .shadow-none {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
@@ -1805,6 +1818,46 @@ video {
   .max-sm\:py-\[4vmax\] {
     padding-top: 4vmax;
     padding-bottom: 4vmax;
+  }
+
+  .max-sm\:py-\[\] {
+    padding-top: ;
+    padding-bottom: ;
+  }
+
+  .max-sm\:px-3\.5 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .max-sm\:px-\[3\.5vmax\] {
+    padding-left: 3.5vmax;
+    padding-right: 3.5vmax;
+  }
+
+  .max-sm\:px-\[\.5vmax\] {
+    padding-left: .5vmax;
+    padding-right: .5vmax;
+  }
+
+  .max-sm\:px-\[4\.5vmax\] {
+    padding-left: 4.5vmax;
+    padding-right: 4.5vmax;
+  }
+
+  .max-sm\:px-\[5\.5vmax\] {
+    padding-left: 5.5vmax;
+    padding-right: 5.5vmax;
+  }
+
+  .max-sm\:px-\[6vmax\] {
+    padding-left: 6vmax;
+    padding-right: 6vmax;
+  }
+
+  .max-sm\:px-\[3vmax\] {
+    padding-left: 3vmax;
+    padding-right: 3vmax;
   }
 
   .max-sm\:pb-\[1\.5vmax\] {
