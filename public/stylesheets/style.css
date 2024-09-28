@@ -96,7 +96,7 @@ body {
 }
 
 .contentBox {
-  background-image: url(/images/random.jpeg);
+  background-image: url("../images/b462f4443dbed7c47c19473bb856ab6b.jpg");
   background-size: cover;
   background-position: center -20vmax;
   background-repeat: no-repeat;
@@ -109,6 +109,40 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.member-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s linear;
+}
+
+.member-button::before {
+  content: "Pay Now";
+  height: 0%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50px;
+  transition: all 0.25s linear;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-weight: 600;
+}
+
+.member-button:hover {
+  transition: all 0.25s linear;
+}
+
+.member-button:hover::before {
+  height: 100%;
+  transition: all 0.25s linear;
 }
 
 @media (max-width: 30cm) {
