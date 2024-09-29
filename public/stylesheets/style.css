@@ -95,6 +95,13 @@ body {
   transition: 0.25s linear;
 }
 
+/* .wrapper .sec {
+  background-image: url("../images/home-5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
 .contentBox {
   background-image: url("../images/b462f4443dbed7c47c19473bb856ab6b.jpg");
   background-size: cover;
@@ -114,6 +121,7 @@ body {
 .member-button {
   position: relative;
   overflow: hidden;
+  background-color: blue;
   transition: all 0.25s linear;
 }
 
@@ -126,7 +134,7 @@ body {
   left: 0%;
   transform: translateY(-50%);
   background-color: white;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: all 0.25s linear;
   overflow: hidden;
   display: flex;

@@ -6,7 +6,8 @@ const passport = require("passport");
 const { isUserLoggedIn } = require("../middleware/isLoggedIn");
 
 router.get("/register", function (req, res, next) {
-  res.render("userRegister", { user: req.user });
+  const { name, mobileNumber } = req.query;
+  res.render("userRegister", { user: req.user, name, mobileNumber });
 });
 
 router.post("/register", async function (req, res, next) {
@@ -59,6 +60,12 @@ router.post("/register", async function (req, res, next) {
   } catch (error) {
     res.send(error.message);
   }
+});
+
+router.post("/grab-attention", (req, res) => {
+  const { name, mobileNumber } = req.body;
+
+  res.redirect(`/user/register?name=${name}&mobileNumber=${mobileNumber}`);
 });
 
 router.get("/login", function (req, res, next) {
