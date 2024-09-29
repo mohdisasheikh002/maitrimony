@@ -678,6 +678,10 @@ video {
   margin-top: 4vmax;
 }
 
+.mt-\[1\.vmax\] {
+  margin-top: 1.vmax;
+}
+
 .block {
   display: block;
 }

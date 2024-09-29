@@ -16,13 +16,28 @@
       method="post"
       class="max-sm:overflow-x-hidden"
     >
+      <div class="mt-[1.5vmax] max-sm:mt-[2vmax]">
+        <select
+          required
+          name="profileIsFor"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+        >
+          <option value="" disabled selected>This profile is for</option>
+          <option value="My self">My self</option>
+          <option value="Son/Daughter">Son/Daughter</option>
+          <option value="Brother/Sister">Brother/Sister</option>
+          <option value="Relative">Relative</option>
+          <option value="Friend">Friend</option>
+          <option value="Client">Client</option>
+        </select>
+      </div>
       <input
         required
         type="text"
         name="name"
         placeholder="Full Name"
         value="<%=name%>"
-        class="block p-[.8vmax] w-[100%] outline-none mt-[1.5vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[2vmax]"
+        class="block p-[.8vmax] w-[100%] outline-none mt-[1vmax] rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[1.3vmax] max-sm:text-[2vmax] max-sm:mt-[1.5vmax]"
       />
       <input
         required
@@ -355,6 +370,21 @@
             <option value="12-157">Sikh - Sikh - Patiala</option>
             <option value="12-158">Sikh - Sikh - Ravidasia</option>
           </optgroup>
+        </select>
+      </div>
+      <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
+        <select
+          required
+          name="education"
+          class="block py-[.8vmax] px-[.5vmax] w-[100%] outline-none rounded-md placeholder:text-zinc-500 max-sm:py-[1.5vmax] max-sm:px-[.8vmax] max-sm:text-[2vmax]"
+        >
+          <option value="" disabled selected>Education</option>
+          <option value="Below 10th">Below 10th</option>
+          <option value="10th Pass">10th Pass</option>
+          <option value="12th Pass">12th Pass</option>
+          <option value="Graduate">Graduate</option>
+          <option value="Post Graduate">Post Graduate</option>
+          <option value="Professional Degree">Professional Degree</option>
         </select>
       </div>
       <div class="mt-[1vmax] max-sm:mt-[1.5vmax]">
