@@ -927,6 +927,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1445,6 +1455,11 @@ video {
   .max-sm\:py-\[4vmax\] {
     padding-top: 4vmax;
     padding-bottom: 4vmax;
+  }
+
+  .max-sm\:py-\[1\.3vmax\] {
+    padding-top: 1.3vmax;
+    padding-bottom: 1.3vmax;
   }
 
   .max-sm\:pb-\[1\.5vmax\] {

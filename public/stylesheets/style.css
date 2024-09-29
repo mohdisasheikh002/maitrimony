@@ -121,7 +121,6 @@ body {
 .member-button {
   position: relative;
   overflow: hidden;
-  background-color: blue;
   transition: all 0.25s linear;
 }
 
